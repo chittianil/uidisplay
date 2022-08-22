@@ -1,23 +1,15 @@
-import logo from './logo.svg';
+
+import Header from './components/Header'
 import './App.css';
+
+
+let array=[{color:"Red",value:"#21233f"} , {color:"green",value:"#212553f"},{color:"yellow",value:"#212666f"}]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul>{array.map((eachItem)=>(<Header eachItem={eachItem} key={eachItem.color}/>))}</ul>
+    
     </div>
   );
 }
